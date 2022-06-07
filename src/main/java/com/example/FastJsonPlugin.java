@@ -1,6 +1,7 @@
 package com.example;
 
 import com.example.cbp.FastJsonReLoaderCBP;
+import com.example.config.Config;
 import org.zeroturnaround.javarebel.ClassResourceSource;
 import org.zeroturnaround.javarebel.Integration;
 import org.zeroturnaround.javarebel.IntegrationFactory;
@@ -21,7 +22,7 @@ public class FastJsonPlugin implements Plugin {
         Integration integration = IntegrationFactory.getInstance();
         ClassLoader cl = getClass().getClassLoader();
 
-        logger.echo("FastJson-JRebel插件启用, 配置详情");
+        logger.echo("FastJson-JRebel插件启用, 配置详情：\n" + Config.getConfigMessage());
         for (String aClass : CLASSES) {
             integration.addIntegrationProcessor(
                     cl,

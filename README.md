@@ -6,11 +6,11 @@
 
 ```
 -Drebel.plugins=/path/to/jrebel-fastjson-reloader-1.0-SNAPSHOT.jar
--Dfastjson.jrebel.package.prefix=com.yourcompany
+-Djrebel.fastjson.package.prefix=com.yourcompany
 ```
 
 - `rebel.plugins`: 指定插件的位置  
-- `fastjson.jrebel.package.prefix`: 指定需要拦截的包名前缀
+- `jrebel.fastjson.package.prefix`: 指定需要拦截的包名前缀
 
 该插件的原理为：
 
